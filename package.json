@@ -4,9 +4,12 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
-        "express": "latest"
+        "aws-sdk": "^2.153.0",
+        "express": "latest",
+        "faye": "^1.2.4",
+        "permessage-deflate": "^0.1.6"
     },
-    "scripts":{
-      "start": "node server.js"
+    "scripts": {
+        "start": "node server.js"
     }
 }
