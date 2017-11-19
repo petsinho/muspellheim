@@ -5,9 +5,28 @@
     "private": true,
     "dependencies": {
         "aws-sdk": "^2.153.0",
+        "dynamo-converter": "^1.0.1",
+        "dynamo-streams": "^1.2.2",
+        "dynamodb-stream": "^0.1.3",
         "express": "latest",
         "faye": "^1.2.4",
-        "permessage-deflate": "^0.1.6"
+        "lodash": "^4.17.4",
+        "permessage-deflate": "^0.1.6",
+        "tempus-fugit": "^2.3.1"
+    },
+    "devDependencies": {
+        "babel-eslint": "^6.1.2",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-polyfill": "^6.22.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-1": "^6.22.0",
+        "babel-register": "^6.22.0",
+        "eslint": "^3.14.1",
+        "eslint-config-airbnb-base": "^4.0.0",
+        "eslint-plugin-import": "^2.2.0",
+        "eslint-plugin-react": "^7.4.0"
     },
     "scripts": {
         "start": "node server.js"
