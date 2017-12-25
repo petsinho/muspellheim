@@ -1,16 +1,13 @@
 
 // TODO: Create fixtures for when db is empty
 // TODO: Split up db ops from pub-sub ops
-const deflate = require('permessage-deflate');
 const AWS = require('aws-sdk');
 const DynamoDBStream = require('dynamodb-stream');
 const converter = require('dynamo-converter');
 const schedule = require('tempus-fugit').schedule;
 const _ = require('lodash');
-const faye = require('faye');
-const ddb = require('../singletons');
-const bayeux = new faye.NodeAdapter({ mount: '/' });
-bayeux.addWebsocketExtension(deflate);
+const ddb = require('../singletons').ddb;
+const bayeux = require('../singletons').bayeux;
 
 // From env variables
 const projectsARN = process.env.DB_PROJECTS_DEV_ARN;

@@ -2,12 +2,11 @@
 // TODO: Split up db ops from pub-sub ops
 const deflate = require('permessage-deflate');
 const http = require('http');
-const faye = require('faye');
 const server = http.createServer();
 const pubishProjects = require('./publications/projects');
 const pubishCategories = require('./publications/categories');
+const bayeux = require('./singletons').bayeux;
 
-const bayeux = new faye.NodeAdapter({ mount: '/' });
 bayeux.addWebsocketExtension(deflate);
 
 // From env variables
