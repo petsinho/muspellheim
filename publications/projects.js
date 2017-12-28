@@ -26,8 +26,6 @@ const params = {
   },
   // FIXME: Visibility is not working
   FilterExpression: '#isHidden = :visibility',
-  // ProjectionExpression: 'Title, Subtitle',
-  // FilterExpression: 'contains (Subtitle, :topic)',
 };
 
 
@@ -82,10 +80,6 @@ const subscribeToDBStream = () => {
     );
     localState[oldData.id] = newData;
     pubishProjects();
-      // const diff = deepDiff(oldData, newData);
-      // if (diff) {
-      //   // handle the diffs
-      // }
   });
 };
 
