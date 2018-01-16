@@ -6,6 +6,22 @@ const server = https.createServer();
 const pubishProjects = require('./publications/projects');
 const pubishCategories = require('./publications/categories');
 const bayeux = require('./singletons').bayeux;
+const express = require('express');
+
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send({
+    Output: 'Hello World!',
+  });
+});
+
+app.post('/', (req, res) => {
+  res.send({
+    Output: 'Hello World!',
+  });
+});
 
 bayeux.addWebsocketExtension(deflate);
 
