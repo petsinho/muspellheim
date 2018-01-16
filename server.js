@@ -1,8 +1,8 @@
 // TODO: Create fixtures for when db is empty
 // TODO: Split up db ops from pub-sub ops
 const deflate = require('permessage-deflate');
-const https = require('https');
-const server = https.createServer();
+const http = require('http');
+const server = http.createServer();
 const pubishProjects = require('./publications/projects');
 const pubishCategories = require('./publications/categories');
 const bayeux = require('./singletons').bayeux;
